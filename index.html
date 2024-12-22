@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,4 +10,76 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日記アプリ</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>日記アプリ</h1>
+
+    <!-- 新規登録フォーム -->
+    <div id="register-section">
+        <h2>新規登録</h2>
+        <form id="register-form">
+            <label for="register-username">ユーザー名:</label>
+            <input type="text" id="register-username" required>
+            
+            <label for="register-password">パスワード:</label>
+            <input type="password" id="register-password" required>
+            
+            <button type="submit">登録</button>
+        </form>
+    </div>
+
+    <!-- ログインフォーム -->
+    <div id="login-section">
+        <h2>ログイン</h2>
+        <form id="login-form">
+            <label for="login-username">ユーザー名:</label>
+            <input type="text" id="login-username" required>
+            
+            <label for="login-password">パスワード:</label>
+            <input type="password" id="login-password" required>
+            
+            <button type="submit">ログイン</button>
+        </form>
+    </div>
+
+    <!-- 日記作成フォーム -->
+    <div id="diary-section" style="display: none;">
+        <form id="diary-form">
+            <h2>日記作成</h2>
+            <label for="title">タイトル:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="date">日付:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="content">本文:</label>
+            <textarea id="content" name="content" required></textarea>
+            
+            <button type="submit">保存</button>
+        </form>
+        <h2>日記一覧</h2>
+        <ul id="diary-list"></ul>
+    </div>
+
+    <!-- 日記詳細モーダル -->
+    <div id="diary-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-date"></p>
+            <p id="modal-content"></p>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+
+</body>
 </html>
