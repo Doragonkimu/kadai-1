@@ -23,7 +23,7 @@
 
 // setupCounter(document.querySelector('#counter'))
 
-
+// ユーザー処理
 const usersKey = 'users';
 const currentUserKey = 'currentUser';
 const diaryEntriesKey = 'diaryEntries';
